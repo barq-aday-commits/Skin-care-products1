@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بارق عدي | 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #e0f2f1; 
+            --card-bg: #f5f5f5; 
+            --accent-color: #00796b; 
+            --text-dark: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body { background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
+
+        nav {
+            position: fixed; top: 0; width: 100%;
+            background-color: rgba(245, 245, 245, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex; justify-content: center;
+            padding: 15px 0; z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            text-decoration: none; color: var(--text-dark);
+            margin: 0 15px; font-weight: 700; transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--accent-color); }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 100px 20px; text-align: center; }
+
+        section { min-height: 80vh; display: flex; align-items: center; justify-content: center; }
+
+        .card {
+            background: var(--card-bg); padding: 40px; border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); width: 100%;
+            border: 1px solid rgba(0, 121, 107, 0.1);
+        }
+
+        .btn-grid {
+            display: flex; justify-content: center; gap: 15px; margin-top: 30px; flex-wrap: wrap;
+        }
+
+        .skill-item {
+            background: var(--white); padding: 20px; border-radius: 12px;
+            border-bottom: 3px solid var(--accent-color);
+            text-decoration: none; color: var(--text-dark);
+            font-weight: bold; transition: 0.3s; cursor: pointer;
+            flex: 1; min-width: 250px;
+        }
+
+        .skill-item:hover { transform: translateY(-5px); background: #eee; }
+
+        .main-btn {
+            background: var(--accent-color); color: white;
+            padding: 12px 30px; border-radius: 50px; text-decoration: none;
+            font-weight: bold; transition: 0.3s;
+        }
+
+        .main-btn:hover { opacity: 0.8; transform: scale(1.05); }
+
+        .social-links { display: flex; justify-content: center; gap: 25px; margin-top: 20px; }
+
+        .social-links a { font-size: 2.5rem; color: var(--accent-color); transition: 0.3s; }
+
+        .social-links a:hover { transform: scale(1.2); color: #004d40; }
+
+        .project-link { display: block; margin: 10px 0; color: #00796b; text-decoration: underline; font-size: 0.9rem; }
+        
+        footer { text-align: center; padding: 40px; color: var(--accent-color); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#about">الخبرات</a>
+        <a href="#works">الأعمال</a>
+        <a href="#contact">تواصل</a>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <div class="card">
+                <h1 style="color: var(--accent-color); font-size: 3rem;">بارق عدي</h1>
+                <p>مصمم واجهات ويب وتطبيقات وبوتات | مبتكر حلول برمجية</p>
+                <div class="btn-grid">
+                    <a href="#about" class="main-btn">خبرتي</a>
+                    <a href="#works" class="main-btn">أعمالي</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="card">
+                <h2>خبرتي ومهاراتي</h2>
+                <p>خريج ثانوية، أعتمد على التعلم الذاتي. لست مجرد مصمم، بل صانع منصات وأدوات ذكية لا تحب التقليد.</p>
+                <div class="btn-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-magic"></i><br>
+                        نمط خاص وذوق يميز أعمالي، وأسعى دائماً لصنع أفكار تبهر العملاء.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works">
+        <div class="container">
+            <div class="card">
+                <h2>أعمالي وشغلي</h2>
+                <div class="btn-grid">
+                    <div class="skill-item">
+                        <strong>💻 واجهات UI/UX</strong>
+                        <a href="https://www.figma.com/proto/5Uj6L4B2" class="project-link" target="_blank">مشاهدة تصاميم فيجما</a>
+                    </div>
+                    <div class="skill-item">
+                        <strong>🌍 منصات ويب</strong>
+                        <a href="https://barq-platform.com" class="project-link" target="_blank">زيارة منصة بارق</a>
+                    </div>
+                    <div class="skill-item" onclick="alert('قيد الانشاء ريث مااتممها ساارفعها لترون اعمالي')">
+                        <strong>🤖 بوتات وحل مشكلات</strong>
+                        <p style="font-size: 0.8rem; color: #888; margin-top:10px;">(اضغط لرؤية الحالة)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="card">
+                <h2>تواصل معي للتعاون</h2>
+                <div class="social-links">
+                    <a href="mailto:barqaday@gmail.com" title="ارسل إيميل">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1DAY4UahvY/" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/barq_aday1?igsh=MWltN24ycjdhaWZmeg==" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة 2026 © بارق عدي مصمم ويب</p>
+    </footer>
+
+</body>
+</html>
