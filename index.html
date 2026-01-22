@@ -3,167 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بارق عدي | 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Alkypras – منتجات التجميل الفاخرة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #e0f2f1; 
-            --card-bg: #f5f5f5; 
-            --accent-color: #00796b; 
-            --text-dark: #333;
-            --white: #ffffff;
+            --lilac: #7A5C8D;
+            --cream: #F6F1EB;
+            --beige: #D8C3A5;
+            --dark: #2E2E2E;
+            --gold: #C5A059;
         }
 
-        * {
-            margin: 0; padding: 0; box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--cream);
+            color: var(--dark);
             font-family: 'Cairo', sans-serif;
-            scroll-behavior: smooth;
+            line-height: 1.6;
         }
 
-        body { background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
-
-        nav {
-            position: fixed; top: 0; width: 100%;
-            background-color: rgba(245, 245, 245, 0.9);
-            backdrop-filter: blur(10px);
-            display: flex; justify-content: center;
-            padding: 15px 0; z-index: 1000;
+        header {
+            background: white;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        nav a {
-            text-decoration: none; color: var(--text-dark);
-            margin: 0 15px; font-weight: 700; transition: 0.3s;
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--lilac);
+            letter-spacing: 3px;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        nav a:hover { color: var(--accent-color); }
+        nav a {
+            margin-right: 30px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s;
+        }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 100px 20px; text-align: center; }
+        nav a:hover { color: var(--lilac); }
 
-        section { min-height: 80vh; display: flex; align-items: center; justify-content: center; }
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(46, 46, 46, 0.4), rgba(46, 46, 46, 0.4)), 
+                        url('https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=2000&auto=format&fit=crop') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 5vw, 60px);
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            padding: 15px 40px;
+            background: var(--beige);
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: 0.4s;
+            border-radius: 5px;
+        }
+
+        .btn-primary:hover { background: var(--lilac); color: white; }
+
+        .products { padding: 80px 5%; }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--lilac);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
 
         .card {
-            background: var(--card-bg); padding: 40px; border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); width: 100%;
-            border: 1px solid rgba(0, 121, 107, 0.1);
+            background: white;
+            transition: 0.4s;
+            border: 1px solid rgba(0,0,0,0.03);
+            border-radius: 10px;
+            overflow: hidden;
         }
 
-        .btn-grid {
-            display: flex; justify-content: center; gap: 15px; margin-top: 30px; flex-wrap: wrap;
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+        .card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
         }
 
-        .skill-item {
-            background: var(--white); padding: 20px; border-radius: 12px;
-            border-bottom: 3px solid var(--accent-color);
-            text-decoration: none; color: var(--text-dark);
-            font-weight: bold; transition: 0.3s; cursor: pointer;
-            flex: 1; min-width: 250px;
+        .card-content { padding: 25px; text-align: center; }
+
+        .card-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--lilac);
         }
 
-        .skill-item:hover { transform: translateY(-5px); background: #eee; }
+        .view-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            border: 1px solid var(--beige);
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+        .view-btn:hover { background: var(--beige); }
 
-        .main-btn {
-            background: var(--accent-color); color: white;
-            padding: 12px 30px; border-radius: 50px; text-decoration: none;
-            font-weight: bold; transition: 0.3s;
+        footer {
+            background: var(--lilac);
+            color: white;
+            padding: 60px 5% 20px;
+            margin-top: 50px;
+            text-align: center;
         }
 
-        .main-btn:hover { opacity: 0.8; transform: scale(1.05); }
-
-        .social-links { display: flex; justify-content: center; gap: 25px; margin-top: 20px; }
-
-        .social-links a { font-size: 2.5rem; color: var(--accent-color); transition: 0.3s; }
-
-        .social-links a:hover { transform: scale(1.2); color: #004d40; }
-
-        .project-link { display: block; margin: 10px 0; color: #00796b; text-decoration: underline; font-size: 0.9rem; }
-        
-        footer { text-align: center; padding: 40px; color: var(--accent-color); font-weight: bold; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
 
+<header>
+    <a href="#" class="logo">ALKYPRAS</a>
     <nav>
-        <a href="#home">الرئيسية</a>
-        <a href="#about">الخبرات</a>
-        <a href="#works">الأعمال</a>
-        <a href="#contact">تواصل</a>
+        <a href="#">الرئيسية</a>
+        <a href="#shop">المجموعة</a>
+        <a href="mailto:barqaday@gmail.com">تواصل معنا</a>
     </nav>
+</header>
 
-    <section id="home">
-        <div class="container">
-            <div class="card">
-                <h1 style="color: var(--accent-color); font-size: 3rem;">بارق عدي</h1>
-                <p>مصمم واجهات ويب وتطبيقات وبوتات | مبتكر حلول برمجية</p>
-                <div class="btn-grid">
-                    <a href="#about" class="main-btn">خبرتي</a>
-                    <a href="#works" class="main-btn">أعمالي</a>
-                </div>
-            </div>
+<section class="hero">
+    <h2>أناقة في كل إشراقة</h2>
+    <p>حلول فاخرة لتفتيح العناية بالبشرة</p><br>
+    <a href="#shop" class="btn-primary">تسوقي الآن</a>
+</section>
+
+<section class="products" id="shop">
+    <h2 class="section-title">مجموعتنا المميزة</h2>
+    <div class="grid" id="product-grid"></div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h3 style="font-family: 'Playfair Display'; margin-bottom: 15px;">ALKYPRAS</h3>
+            <p>منصة تجميل فاخرة تقدم منتجات تبييض متميزة صُممت للأناقة والثقة.</p>
         </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <div class="card">
-                <h2>خبرتي ومهاراتي</h2>
-                <p>خريج ثانوية، أعتمد على التعلم الذاتي. لست مجرد مصمم، بل صانع منصات وأدوات ذكية لا تحب التقليد.</p>
-                <div class="btn-grid">
-                    <div class="skill-item">
-                        <i class="fas fa-magic"></i><br>
-                        نمط خاص وذوق يميز أعمالي، وأسعى دائماً لصنع أفكار تبهر العملاء.
-                    </div>
-                </div>
-            </div>
+        <div>
+            <h4>اتصل بنا</h4>
+            <p>Email: barqaday@gmail.com</p>
+            <p>حقوق التصميم محفوظة لـ بارق عدي</p>
         </div>
-    </section>
+    </div>
+    <p style="margin-top: 40px; font-size: 12px; opacity: 0.8;">© 2026 Alkypras. جميع الحقوق محفوظة.</p>
+</footer>
 
-    <section id="works">
-        <div class="container">
-            <div class="card">
-                <h2>أعمالي وشغلي</h2>
-                <div class="btn-grid">
-                    <div class="skill-item">
-                        <strong>💻 واجهات UI/UX</strong>
-                        <a href="https://www.figma.com/proto/5Uj6L4B2" class="project-link" target="_blank">مشاهدة تصاميم فيجما</a>
-                    </div>
-                    <div class="skill-item">
-                        <strong>🌍 منصات ويب</strong>
-                        <a href="https://barq-platform.com" class="project-link" target="_blank">زيارة منصة بارق</a>
-                    </div>
-                    <div class="skill-item" onclick="alert('قيد الانشاء ريث مااتممها ساارفعها لترون اعمالي')">
-                        <strong>🤖 بوتات وحل مشكلات</strong>
-                        <p style="font-size: 0.8rem; color: #888; margin-top:10px;">(اضغط لرؤية الحالة)</p>
-                    </div>
-                </div>
+<script>
+    const grid = document.getElementById('product-grid');
+    
+    const products = [
+        { name: "سيروم التبييض المتقدم", img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800" },
+        { name: "كريم النضارة الليلي", img: "https://images.unsplash.com/photo-1567721913486-6585f069b332?q=80&w=800" },
+        { name: "لوشن إشراقة اللؤلؤ", img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800" },
+        { name: "مرطب البشرة المخملي", img: "https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=800" },
+        { name: "ماسك الذهب النقي", img: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800" }
+    ];
+
+    // تكرار المنتجات لملء 40 خانة
+    for(let i=0; i<40; i++){
+        const p = products[i % products.length];
+        grid.innerHTML += `
+        <div class="card">
+            <img src="${p.img}" alt="${p.name}">
+            <div class="card-content">
+                <h3>${p.name}</h3>
+                <p>صُمم لتفتيح وترطيب بشرتك للحصول على توهج صحي ورائع.</p>
+                <a href="#" class="view-btn">اكتشفي المزيد</a>
             </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <div class="card">
-                <h2>تواصل معي للتعاون</h2>
-                <div class="social-links">
-                    <a href="mailto:barqaday@gmail.com" title="ارسل إيميل">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.facebook.com/share/1DAY4UahvY/" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/barq_aday1?igsh=MWltN24ycjdhaWZmeg==" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>جميع الحقوق محفوظة 2026 © بارق عدي مصمم ويب</p>
-    </footer>
+        </div>`;
+    }
+</script>
 
 </body>
 </html>
