@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alkypras – منتجات التجميل الفاخرة</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Alkypras – Premium Luxury Beauty & Whitening</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -20,7 +20,7 @@
         body {
             background: var(--cream);
             color: var(--dark);
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
         }
 
@@ -46,20 +46,23 @@
         }
 
         nav a {
-            margin-right: 30px;
+            margin-left: 30px;
             text-decoration: none;
             color: var(--dark);
-            font-weight: 700;
+            font-weight: 400;
             font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: 0.3s;
         }
 
         nav a:hover { color: var(--lilac); }
 
+        /* التعديل هنا: صورة خلفية فخمة لمجموعة منتجات طبية وتجميلية */
         .hero {
-            height: 70vh;
-            background: linear-gradient(rgba(46, 46, 46, 0.4), rgba(46, 46, 46, 0.4)), 
-                        url('https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=2000&auto=format&fit=crop') center/cover;
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -67,12 +70,14 @@
             text-align: center;
             color: white;
             padding: 0 20px;
+            background-attachment: scroll; /* يضمن توافق الصورة مع الجوالات */
         }
 
         .hero h2 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(32px, 5vw, 60px);
+            font-size: clamp(32px, 6vw, 65px);
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .btn-primary {
@@ -80,10 +85,11 @@
             background: var(--beige);
             color: var(--dark);
             text-decoration: none;
-            font-weight: 700;
-            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             transition: 0.4s;
-            border-radius: 5px;
+            border-radius: 2px;
         }
 
         .btn-primary:hover { background: var(--lilac); color: white; }
@@ -95,7 +101,6 @@
             font-family: 'Playfair Display', serif;
             font-size: 36px;
             margin-bottom: 50px;
-            color: var(--lilac);
         }
 
         .grid {
@@ -108,15 +113,13 @@
             background: white;
             transition: 0.4s;
             border: 1px solid rgba(0,0,0,0.03);
-            border-radius: 10px;
-            overflow: hidden;
         }
 
         .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
 
         .card img {
             width: 100%;
-            height: 350px;
+            height: 380px;
             object-fit: cover;
             display: block;
         }
@@ -133,29 +136,27 @@
         .view-btn {
             display: inline-block;
             margin-top: 15px;
-            padding: 10px 25px;
+            padding: 8px 20px;
             border: 1px solid var(--beige);
             color: var(--dark);
             text-decoration: none;
-            font-size: 12px;
-            font-weight: 700;
-            transition: 0.3s;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
         }
-        .view-btn:hover { background: var(--beige); }
 
         footer {
             background: var(--lilac);
             color: white;
             padding: 60px 5% 20px;
             margin-top: 50px;
-            text-align: center;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
-            margin-bottom: 30px;
+            text-align: left;
         }
     </style>
 </head>
@@ -164,20 +165,20 @@
 <header>
     <a href="#" class="logo">ALKYPRAS</a>
     <nav>
-        <a href="#">الرئيسية</a>
-        <a href="#shop">المجموعة</a>
-        <a href="mailto:barqaday@gmail.com">تواصل معنا</a>
+        <a href="#">Home</a>
+        <a href="#">Collection</a>
+        <a href="#">Contact</a>
     </nav>
 </header>
 
 <section class="hero">
-    <h2>أناقة في كل إشراقة</h2>
-    <p>حلول فاخرة لتفتيح العناية بالبشرة</p><br>
-    <a href="#shop" class="btn-primary">تسوقي الآن</a>
+    <h2>Elegance in Every Glow</h2>
+    <p style="font-size: 1.2rem; letter-spacing: 1px;">Scientific Precision for Timeless Beauty</p><br>
+    <a href="#shop" class="btn-primary">Shop Now</a>
 </section>
 
 <section class="products" id="shop">
-    <h2 class="section-title">مجموعتنا المميزة</h2>
+    <h2 class="section-title">Our Signature Collection</h2>
     <div class="grid" id="product-grid"></div>
 </section>
 
@@ -185,29 +186,29 @@
     <div class="footer-grid">
         <div>
             <h3 style="font-family: 'Playfair Display'; margin-bottom: 15px;">ALKYPRAS</h3>
-            <p>منصة تجميل فاخرة تقدم منتجات تبييض متميزة صُممت للأناقة والثقة.</p>
+            <p>Luxury beauty platform delivering premium whitening products crafted for elegance and confidence.</p>
         </div>
         <div>
-            <h4>اتصل بنا</h4>
-            <p>Email: barqaday@gmail.com</p>
-            <p>حقوق التصميم محفوظة لـ بارق عدي</p>
+            <h4>Contact</h4>
+            <p>Email: info@alkypras.com</p>
+            <p>London, UK (Virtual Office)</p>
         </div>
     </div>
-    <p style="margin-top: 40px; font-size: 12px; opacity: 0.8;">© 2026 Alkypras. جميع الحقوق محفوظة.</p>
+    <p style="margin-top: 40px; font-size: 12px; opacity: 0.6; text-align: center;">© 2026 Alkypras. All Rights Reserved.</p>
 </footer>
 
 <script>
     const grid = document.getElementById('product-grid');
     
     const products = [
-        { name: "سيروم التبييض المتقدم", img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800" },
-        { name: "كريم النضارة الليلي", img: "https://images.unsplash.com/photo-1567721913486-6585f069b332?q=80&w=800" },
-        { name: "لوشن إشراقة اللؤلؤ", img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800" },
-        { name: "مرطب البشرة المخملي", img: "https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=800" },
-        { name: "ماسك الذهب النقي", img: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800" }
+        { name: "Advanced Whitening Serum", img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop" },
+        { name: "Radiance Night Cream", img: "https://images.unsplash.com/photo-1567721913486-6585f069b332?q=80&w=800&auto=format&fit=crop" },
+        { name: "Luxury Pearl Glow", img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800&auto=format&fit=crop" },
+        { name: "Velvet Skin Lotion", img: "https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=800&auto=format&fit=crop" },
+        { name: "Pure Brightening Essence", img: "https://images.unsplash.com/photo-1598440448730-bd3ff052c948?q=80&w=800&auto=format&fit=crop" },
+        { name: "Gold Radiant Mask", img: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop" }
     ];
 
-    // تكرار المنتجات لملء 40 خانة
     for(let i=0; i<40; i++){
         const p = products[i % products.length];
         grid.innerHTML += `
@@ -215,8 +216,8 @@
             <img src="${p.img}" alt="${p.name}">
             <div class="card-content">
                 <h3>${p.name}</h3>
-                <p>صُمم لتفتيح وترطيب بشرتك للحصول على توهج صحي ورائع.</p>
-                <a href="#" class="view-btn">اكتشفي المزيد</a>
+                <p>Designed to brighten and hydrate your skin for a radiant, healthy glow.</p>
+                <a href="#" class="view-btn">Discover</a>
             </div>
         </div>`;
     }
